@@ -4,3 +4,4 @@ checkliste:
 
 - pipeline
 - server monitoring befehle
+- unit test
