@@ -4,11 +4,12 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '*/10 * * * *'  # Alle 10 Minuten ausführen
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  monitoring:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,5 +25,5 @@ jobs:
         run: |
           pip install psutil
 
-      - name: Monitoring-Skript ausführen
-        run: python server_monitoring.py
+      - name: Unit-Tests ausführen
+        run: python -m unittest test_server_monitoring.py
