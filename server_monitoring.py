@@ -17,7 +17,7 @@ EMAIL_RECEIVER = "admin@example.com"
 EMAIL_PASSWORD = "yourpassword"
 
 def send_alert(subject, message):
-    """Sendet eine Alarm-E-Mail."""
+    #Sendet eine Alarm-E-Mail
     msg = MIMEText(message)
     msg['Subject'] = subject
     msg['From'] = EMAIL_SENDER
@@ -33,7 +33,7 @@ def send_alert(subject, message):
         print(f"Fehler beim Senden der E-Mail: {e}")
 
 def check_system():
-    """Überprüft die Systemparameter und sendet bei Bedarf eine Alarmmeldung."""
+    #Überprüft die Systemparameter und sendet bei Bedarf eine Alarmmeldung
     alerts = []
     
     cpu_usage = psutil.cpu_percent(interval=1)
