@@ -62,3 +62,5 @@ if __name__ == "__main__":
     while True:
         check_system()
         time.sleep(60)  # Überprüfung alle 60 Sekunden
+
+fhhdhsdhiahsdahsdas
